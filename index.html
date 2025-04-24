@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoBGS</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="title is-2 publication-title"><h1 style="display: inline; clear:none;">MoBGS: Motion Deblurring Dynamic 3D Gaussian Splatting for Blurry Monocular Video</h1></div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://quan5609.github.io/">Minh-Quan Viet Bui</a><sup>* <img src="./static/image/kaist_icon.png" width="25"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Jongmin Park</a><sup>* <img src="./static/image/kaist_icon.png" width="25"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Juan Luis Gonzalez Bello</a><sup> <img src="./static/image/kaist_icon.png" width="25"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Jaeho Moon</a><sup> <img src="./static/image/kaist_icon.png" width="25"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/view/ozbro/">Jihyong Oh</a><sup>† <img src="./static/image/cau_icon.jpg" width="20"></sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Munchurl Kim</a><sup>† <img src="./static/image/kaist_icon.png" width="25"></sup>
+              </span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Co-first authors (equal contribution)</span>
+              <!-- <span class="author-block"><sup>†</sup>Corresponding author</span> -->
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> <sup>†</sup>Co-corresponding authors</span>
+              <!-- <span class="author-block"><sup>†</sup>Corresponding author</span> -->
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup><img src="./static/image/kaist_icon.png" width="25"></sup>KAIST, South Korea</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup><img src="./static/image/cau_icon.jpg" width="20"></sup>Chung-Ang University, South Korea</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2504.15122"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" rel="noopener noreferrer" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (To be released)</span>
+                    </a>
+                </span>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3 no-bottom">Novel View Synthesis Demo</h2>
+    <h2 class="title is-4" style="display: inline; font-weight: normal;">We follow the experimental settings of DyBluRF [<font color="blue">65</font>]. Each monocular training sequence consists of 24 frames of resolution 288x512.</h2>
+    <!-- <div class="video-container" align="center" style="margin-bottom: 30px; margin-top: 30px;">
+        <video id="nvidia_input" loop playsinline muted controls autoplay style="height: 150px;">
+          <source src="./static/video/nvidia/skating_input.mp4" type="video/mp4">
+        </video>
+        <h2 class="title is-4">Training Views. </h2>
+    </div> -->
+    
+    <div class="video-container" align="center" style="margin-bottom: 30px;">
+      <video id="nvidia_novelview" loop playsinline muted controls autoplay style="max-height: 100%; ">
+        <source src="./static/video/stereo/demo_basketball.mp4" type="video/mp4">
+      </video>
+      <h2 class="title is-4" style="display: inline;">Novel View Synthesis. </h2> <h2 class="title is-4" style="display: inline; font-weight: normal;">Full screen for better visualization.</h2>
+    </div>
+
+
+    <div class="video-select" align="center">
+      <a class="video-item" onclick="changeVideo_nvidia('./static/video/stereo/demo_basketball.mp4', './static/video/stereo/demo_basketball.mp4', 'basketball')">
+        <button class="button-17 button-17-selected" role="button" id="btn_nvidia_basketball" >Basketball</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_nvidia('./static/video/stereo/demo_seesaw.mp4', './static/video/stereo/demo_seesaw.mp4', 'seesaw')">
+        <button class="button-17" role="button" id="btn_nvidia_seesaw" >Seesaw</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_nvidia('./static/video/stereo/demo_skating.mp4', './static/video/stereo/demo_skating.mp4', 'skating')">
+        <button class="button-17" role="button" id="btn_nvidia_skating" >Skating</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3 no-bottom">Latent Rendering Demo</h2>
+    <h2 class="title is-4" style="display: inline; font-weight: normal;">We provide latent sharp image renderings along the training trajectory to demonstrate the robustness of our deblurring process and temporal consistency.</h2>
+    <div class="video-container" align="center" style="margin-bottom: 30px; margin-top: 30px;">
+        <video id="davis_track" loop playsinline muted controls autoplay style="width: 1000px;">
+          <source src="./static/video/latent/latent_skating.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="video-select" align="center">
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_basketball.mp4', 'basketball')">
+        <button class="button-20 " role="button" id="btn_davs_track_basketball" >Basketball</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_children.mp4', 'children')">
+        <button class="button-20 " role="button" id="btn_davs_track_children" >Children</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_sailor.mp4', 'sailor')">
+        <button class="button-20 " role="button" id="btn_davs_track_sailor" >Sailor</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_seesaw.mp4', 'seesaw')">
+        <button class="button-20 " role="button" id="btn_davs_track_seesaw" >Seesaw</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_skating.mp4', 'skating')">
+        <button class="button-20 button-20-selected" role="button" id="btn_davs_track_skating" >Skating</button>
+      </a>
+      <a class="video-item" onclick="changeVideo_davis_track('./static/video/latent/latent_street.mp4', 'street')">
+        <button class="button-20 " role="button" id="btn_davs_track_street" >Street</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
