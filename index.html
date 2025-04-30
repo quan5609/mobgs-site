@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/png" href="static\image\icon.png"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -30,7 +31,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="title is-2 publication-title"><h1 style="display: inline; clear:none;">MoBGS: Motion Deblurring Dynamic 3D Gaussian Splatting for Blurry Monocular Video</h1></div>
+            <div class="title is-2 publication-title"><h1 style="display: inline; clear:none;"><img src="./static/image/icon.png" width="50", height="50"><h1 class="gradient-text" style="display: inline; clear:none;">MoBGS</h1>: Motion Deblurring Dynamic 3D Gaussian Splatting for Blurry Monocular Video</h1></div>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://quan5609.github.io/">Minh-Quan Viet Bui</a><sup>* <img src="./static/image/kaist_icon.png" width="25"></sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -57,8 +58,8 @@
               <!-- <span class="author-block"><sup>†</sup>Corresponding author</span> -->
             </div>
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup><img src="./static/image/kaist_icon.png" width="25"></sup>KAIST, South Korea</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="author-block"><sup><img src="./static/image/cau_icon.jpg" width="20"></sup>Chung-Ang University, South Korea</span>
+              <span class="author-block"><sup><img src="./static/image/kaist_icon.png" width="25"></sup>KAIST</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup><img src="./static/image/cau_icon.jpg" width="20"></sup>Department of Imaging Science, GSAIM, Chung-Ang University</span>
             </div>
   
             <div class="column has-text-centered">
@@ -91,6 +92,40 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              TL;DR:
+              We propose MoBGS, a novel deblurring dynamic 3D Gaussian Splatting (3DGS) framework capable of reconstructing sharp and high-quality novel spatio-temporal views from blurry monocular videos in an end-to-end manner. 
+              MoBGS introduces a novel Blur-adaptive Latent Camera Estimation (BLCE) method for effective latent camera trajectory estimation, improving global camera motion deblurring. In addition, we propose a physically-inspired Latent Camera-induced Exposure Estimation (LCEE) method to ensure consistent deblurring of both global camera and local object motion.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+  </section>
+
+  <section class="section">
+    <div class="container is-widescreen">
+      <h2 class="title is-3">Framework Architecture</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <image src="./static/image/architecture.png" class="img-responsive" alt="architecture"><br>
+          <div class="content has-text-justified">
+            <p>
+              <b>Overview of MoBGS.</b> Our MoBGS estimates latent camera poses for each blurry frame using our Blur-adaptive Latent Camera Estimation (BLCE) method. Then, leveraging these latent camera poses, it estimates the corresponding exposure time via our Latent Camera-induced Exposure Estimation (LCEE) method, ensuring a physically consistent blur modeling of local moving objects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section class="section">
   <div class="container is-widescreen">
@@ -160,6 +195,43 @@
     </div>
   </div>
 </section>
+<section class="section" id="BibTeX">
+  <div class="container is-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{bui2025mobgsmotiondeblurringdynamic,
+      title={MoBGS: Motion Deblurring Dynamic 3D Gaussian Splatting for Blurry Monocular Video}, 
+      author={Minh-Quan Viet Bui and Jongmin Park and Juan Luis Gonzalez Bello and Jaeho Moon and Jihyong Oh and Munchurl Kim},
+      year={2025},
+      eprint={2504.15122},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+}</code></pre>
+  </div>
+</section>
 
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a target="_blank" rel="noopener noreferrer" class="icon-link"
+         href="https://arxiv.org/pdf/2312.13528.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a target="_blank" rel="noopener noreferrer" class="icon-link" href="https://github.com/KAIST-VICLab/DyBluRF" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a target="_blank" rel="noopener noreferrer" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>  that kindly open sourced the template of this website. 
+            Please visit our <a target="_blank" rel="noopener noreferrer" href="https://github.com/KAIST-VICLab">VIC-Lab</a> for more interesting researches
+          </p>
+        </div>
+      </div>
+      <!-- <a href="https://mapmyvisitors.com/web/1bvn0"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=WDpUeHA9ekEwxJyLBIcXhVkMyDnN_54eHGOfpbaphpo&cl=ffffff" /></a> -->
+    </div>
+  </div>
+</footer>
 </body>
 </html>

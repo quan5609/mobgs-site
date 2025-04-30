@@ -443,3 +443,27 @@ body {
   will-change: transform, opacity;
   z-index: 0;
 }
+
+.gradient-text {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #bfa300, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gradient-text:hover {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #000000,#bfa300);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
